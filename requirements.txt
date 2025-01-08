@@ -6,3 +6,4 @@ openpyxl>=3.0.0
 setuptools>=65.5.1
 wheel
 cython
+python-dotenv
