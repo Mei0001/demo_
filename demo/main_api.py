@@ -114,12 +114,12 @@ if not st.session_state.chat_mode:
 
     full_inputs = {**st.session_state.inputs, **st.session_state.additional_inputs}
     try:
-        file_path = "ダミーデータ.xlsx"
+        file_url = "https://github.com/Mei0001/demo_/blob/main/demo/%E3%83%80%E3%83%9F%E3%83%BC%E3%83%87%E3%83%BC%E3%82%BF.xlsx"
         length = st.session_state.inputs["基板長さ_mm"]
         width = st.session_state.inputs["基板幅_mm"]
         sheet_names = get_sheet_names(length, width)
         dfs = {
-            sheet_name: pd.read_excel(file_path, sheet_name=sheet_name) 
+            sheet_name: pd.read_excel(file_url, sheet_name=sheet_name) 
             for sheet_name in sheet_names
         }
         
